@@ -1,0 +1,45 @@
+# Dependencies and build outputs
+node_modules/
+dist/
+coverage/
+*.tsbuildinfo
+
+# Environment files (only the sanitized template is public)
+.env
+.env.*
+!.env.example
+
+# Local tools, wallets, sessions and generated reports
+.tools/
+data/
+artifacts/
+test-results/
+playwright-report/
+blob-report/
+*wallets*.json*
+*accounts*.json*
+*.log
+*.sqlite
+*.sqlite3
+*.db
+*.pid
+
+# Credentials, certificates and local backups
+*.pem
+*.key
+*.p12
+*.pfx
+.npmrc
+.netrc
+*.bak
+*.backup
+
+# Editor and operating system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*~
+
+# Empty local scratch file
+/test.txt

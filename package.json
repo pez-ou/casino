@@ -1,0 +1,26 @@
+{
+  "name": "velvet-casino",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces",
+    "test": "tsx --test tests/*.test.ts",
+    "dev:server": "npm run dev -w apps/server",
+    "dev:web": "npm run dev -w apps/web",
+    "test:browser": "playwright test",
+    "format": "prettier --write apps packages tests *.json *.ts compose.yaml README.md"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.0",
+    "@types/node": "^24.0.0",
+    "prettier": "^3.9.9",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0"
+  },
+  "dependencies": {
+    "socket.io-client": "^4.8.1"
+  }
+}
